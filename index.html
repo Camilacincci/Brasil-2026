@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASIL</title>
+</head>    
+<body>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body bgcolor="black">
+<font face="arial" color="green">
+    <h2>Mapa </font><font face="arial" color="yellow"> de </font><font face="arial" color="green"> Florianópolis 🏖️ </font><h2>
+
+  <div id="map"></div>
+
+  <!-- JS de Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Inicializar mapa centrado en Florianópolis
+    const map = L.map('map').setView([-27.5949, -48.5482], 12);
+
+    // Capa de mapa (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // Pin central
+    L.marker([-27.5949, -48.5482])
+      .addTo(map)
+      .bindPopup('Florianópolis 🌴')
+      .openPopup();
+  
+  const lugares = [
+  { lat: -27.3906, lng: -48.4116, texto: "Praia Brava" },
+  { lat: -27.6033, lng: -48.4677, texto: "Praia Mole" },
+  { lat: -27.5086, lng: -48.5156, texto: "Santo Antônio de Lisboa" },
+  { lat: -27.5766, lng: -48.4247, texto: "Canal da Barra da Lagoa" },
+  { lat: -27.4461, lng: -48.5266, texto: "Praia Daniela" },
+  { lat: -27.6896, lng: -48.4722, texto: "Ilha do Campeche" },
+  { lat: -27.4366, lng: -48.3997, texto: "Praia dos Ingleses" },
+  { lat: -27.6296, lng: -48.4417, texto: "Praia da Joaquina" },
+  { lat: -27.7746, lng: -48.4896, texto: "Lagoinha do Leste" },
+  { lat: -27.4306, lng: -48.4566, texto: "Praia de Canasvieiras" }
+];
+ 
+L.marker([-27.3936, -48.4042])
+  .addTo(map)
+  .bindPopup("Praia Brava");
+
+L.marker([-27.6030, -48.4660])
+  .addTo(map)
+  .bindPopup("Praia Mole");
+
+L.marker([-27.5099, -48.5169])
+  .addTo(map)
+  .bindPopup("Santo Antônio de Lisboa");
+
+L.marker([-27.5786, -48.4258])
+  .addTo(map)
+  .bindPopup("Canal da Barra da Lagoa");
+
+L.marker([-27.4376, -48.5064])
+  .addTo(map)
+  .bindPopup("Praia Daniela");
+
+L.marker([-27.6956, -48.4662])
+  .addTo(map)
+  .bindPopup("Ilha do Campeche");
+
+L.marker([-27.4329, -48.3910])
+  .addTo(map)
+  .bindPopup("Praia dos Ingleses");
+
+L.marker([-27.6284, -48.4392])
+  .addTo(map)
+  .bindPopup("Praia da Joaquina");
+
+L.marker([-27.7735, -48.4865])
+  .addTo(map)
+  .bindPopup("Lagoinha do Leste");
+
+L.marker([-27.4259, -48.4550])
+  .addTo(map)
+  .bindPopup("Praia de Canasvieiras");
+  
+ L.marker([-27.3936, -48.4042])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia Brava</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.3936,-48.4042" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.6030, -48.4660])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia Mole</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.6030,-48.4660" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.5099, -48.5169])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Santo Antônio de Lisboa</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.5099,-48.5169" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.5786, -48.4258])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Canal da Barra da Lagoa</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.5786,-48.4258" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.4376, -48.5064])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia Daniela</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.4376,-48.5064" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.6956, -48.4662])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Ilha do Campeche</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.6956,-48.4662" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.4329, -48.3910])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia dos Ingleses</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.4329,-48.3910" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.6284, -48.4392])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia da Joaquina</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.6284,-48.4392" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.7735, -48.4865])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Lagoinha do Leste</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.7735,-48.4865" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+L.marker([-27.4259, -48.4550])
+  .addTo(map)
+  .bindPopup(`
+    <strong>Praia de Canasvieiras</strong><br>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=-27.4259,-48.4550" target="_blank">
+      📍 Cómo llegar
+    </a>
+  `);
+
+  </script>
+</body>
+</html>
